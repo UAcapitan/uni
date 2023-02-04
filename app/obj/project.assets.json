@@ -8,7 +8,7 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/ed/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "/home/ed/Desktop/EdMix/uni/app/app.csproj",
       "projectName": "app",
       "projectPath": "/home/ed/Desktop/EdMix/uni/app/app.csproj",
-      "packagesPath": "/home/ed/.nuget/packages/",
+      "packagesPath": "/root/.nuget/packages/",
       "outputPath": "/home/ed/Desktop/EdMix/uni/app/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ed/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
