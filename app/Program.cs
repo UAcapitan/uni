@@ -39,7 +39,7 @@ namespace Uni
     class SystemNew
     {
         public string version;
-        public List<String> users;
+        public List<String> users; // Structure which I use for lab
         public SystemNew()
         {
             this.version = "0.1v";
@@ -48,11 +48,22 @@ namespace Uni
         public void addUser(User user)
         {   
             Console.WriteLine("New user was added:");
-            this.users.Add(user.name);
+            this.users.Add(user.name); // Adding element to list
             user.printName();
             user.printPassword();
         }
-        public void printUsers() {
+        public void removeUser(User user)
+        {
+            if (this.users.Contains(user.name)) // Does user exist in this list
+            {   
+                this.users.Remove(user.name); // Removing user from list
+                Console.WriteLine("User was removed from list");
+            } else {
+                Console.WriteLine("There is no this user");
+            }
+        }
+        public void printUsers() 
+        {
             Console.WriteLine("Users in system:");
             foreach (string user in this.users) Console.WriteLine(user);
         }
@@ -67,12 +78,19 @@ namespace Uni
             SystemNew system_new = new SystemNew();
 
             Console.WriteLine("System was created: " + system_new.version);
+
             Console.WriteLine();
             system_new.addUser(user);
+
             Console.WriteLine();
             system_new.addUser(root_user);
+
             Console.WriteLine();
             system_new.printUsers();
+
+            Console.WriteLine();
+            system_new.removeUser(user);
+            system_new.removeUser(user);
         }
     }
 }
